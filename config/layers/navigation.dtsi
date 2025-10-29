@@ -3,14 +3,11 @@
  ┌─────────────────────────────────────────── NAVIGATION ────────────────────────────────────────┐
  │                                                                                               │
  │   ╭────────────── LEFT HAND ───────────────╮    ╭────────────── RIGHT HAND ───────────────╮   │
-││
-
-
  │                                                                                               │
- │   Top:    S+A+TAB A+TAB  C+E,P  C+E,N  CMD+[         [,B     P      N      #      *          │
- │   Home:    ←      ↓      ↑      →    CMD+]         ],B     H      J      K      L          │
- │           │C│    │A│    │G│    │S│                        │S│    │G│    │A│    │C│          │
- │   Bottom: C+E,H  C+E,J  C+E,K  C+E,L   PgUp         PgDn   A+H    A+J    A+K    A+L          │
+ │   Top:   S+A+TAB A+TAB  C+E,P  C+E,N  CMD+[         [,B     P      N      #      *            │
+ │   Home:    ←      ↓      ↑      →     CMD+]         ],B     H      J      K      L            │
+ │           │C│    │A│    │G│    │S│                         │S│    │G│    │A│    │C│           │
+ │   Bottom: C+E,H  C+E,J  C+E,K  C+E,L   PgUp         PgDn   A+H    A+J    A+K    A+L           │
  │                                                                                               │
  │   Thumbs: [REPEAT] [DELETE] [ESC]                [ENTER] [SPACE] [REPEAT]                     │
  │              ^left cluster^                           ^right cluster^                         │
@@ -19,12 +16,15 @@
  │  Legend:                                                                                      │
  │   &kp <KEY>          → normal keypress                                                        │
  │   &hm MODIFIER <KEY> → home row mod: tap = key, hold = modifier                               │
- │   &nav_*             → custom navigation macro                                                │
+ │   &cycle_*           → custom app/space/buffer cycling macro                                  │
+ │   &navigate_*        → custom window navigation macro                                         │
+ │   &vim_*             → custom vim navigation macro                                            │
  │   S+A+TAB            → Shift + Alt + Tab                                                      │
  │   A+TAB              → Alt + Tab                                                              │
  │   C+E,P              → Ctrl+E, then P (tmux prefix command)                                   │
  │   [,B                → [ then B (vim command)                                                 │
  │   A+H                → Alt + H                                                                │
+ │   [REPEAT]           → repeats last key or macro                                              │
  │                                                                                               │
  └───────────────────────────────────────────────────────────────────────────────────────────────┘
 */
@@ -38,24 +38,24 @@
         bindings = <
 
             /* Top Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &cycle_app_switcher_backwards   &cycle_app_switcher_forwards    &cycle_space_backwards    &cycle_space_forwards    &app_tab_previous      &vim_buffer_cycle_backwards   &kp P           &kp N           &kp HASH        &kp ASTRK
+            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
+            &cycle_app_switcher_backwards   &cycle_app_switcher_forwards    &cycle_space_backwards    &cycle_space_forwards    &app_tab_previous      &vim_buffer_cycle_backwards   &kp P               &kp N              &kp HASH            &kp ASTRK
 
 
             /* Home Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &hm LCTRL LEFT       &hm LALT DOWN   &hm LGUI UP      &hm LSHIFT RIGHT &app_tab_next      &vim_buffer_cycle_forwards  &hm RSHIFT H    &hm RGUI J      &hm RALT K      &hm RCTRL L
+            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
+            &hm LCTRL LEFT                  &hm LALT DOWN                   &hm LGUI UP               &hm LSHIFT RIGHT         &app_tab_next          &vim_buffer_cycle_forwards    &hm RSHIFT H        &hm RGUI J         &hm RALT K          &hm RCTRL L
 
 
             /* Bottom Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &navigate_window_left        &navigate_window_down   &navigate_window_up    &navigate_window_right    &kp PG_UP          &kp PG_DN        &vim_window_left      &vim_window_down      &vim_window_up      &vim_window_right
+            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
+            &navigate_window_left           &navigate_window_down           &navigate_window_up       &navigate_window_right   &kp PG_UP              &kp PG_DN                     &vim_window_left    &vim_window_down   &vim_window_up      &vim_window_right
 
 
             /* Thumbs */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
 
-                                                       &kp RPT     &lt NAV BSPC    &lt SYM ESC        &lt FN ENTER    &lt MAGIC SPACE   &magic_key
+                                                                            &kp RPT                   &lt NAV BSPC             &lt SYM ESC            &lt FN ENTER                  &lt MAGIC SPACE      &magic_key
         >;
     };
 };
