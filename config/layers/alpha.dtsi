@@ -1,0 +1,44 @@
+/* # Currently implementing STRDY alpha layout */
+/* See: https://oxey.dev/sturdy/index.html */
+/*
+ ┌────────────────────────────────────── STRDY / CORNE 36 ───────────────────────────────────┐
+ │                                                                                           │
+ │   ╭────────────── LEFT HAND ───────────────╮    ╭────────────── RIGHT HAND ───────────────╮
+ │                                                                                           │
+ │   Top:     V     M     L     C     P             X     F     O     U     J                │
+ │   Home:    S     T     R     D     Y             •     N     A     E     I                │
+ │           │C│   │A│   │G│   │S│                       │S│   │G│   │A│   │C│               │
+ │   Bottom:  Z     K     Q     G     W             B     H     '     ;     ,                │
+ │                                                                                           │
+ │   Thumbs: [REPEAT] [DELETE] [ESC]                [ENTER] [SPACE] [REPEAT]                 │
+ │              ^left cluster^             ^right cluster^                                   │
+ │                                                                                           │
+ │  ──────────────────────────────────────────────────────────────────────────────────────── │
+ │  Legend:                                                                                  │
+ │   &kp <KEY>     → normal keypress                                                         │
+ │   &lt LAYER <KEY> → tap = key, hold = activate layer                                      │
+ │   &magic_key     → custom macro / layer trigger                                           │
+ │   [REPEAT]       → repeats last key or macro                                              │
+ │                                                                                           │
+ └───────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+
+/ {
+    alpha: alpha {
+        display-name = "Alpha STRDY";
+        bindings = <
+            /* Row 1 (top row) */
+            &kp V    &kp M    &kp L    &kp C    &kp P                        &kp X    &kp F    &kp O    &kp U    &kp J
+
+            /* Row 2 (home row + CAGS/SGAC modifiers) */
+            &hm LCTRL S   &hm LALT T   &hm LGUI R   &hm LSHFT D   &kp Y      &kp DOT       &hm RSHFT N  &hm RGUI A   &hm RALT E    &hm RCTRL I
+
+            /* Row 3 (bottom row) */
+            &kp Z    &kp K    &kp Q    &kp G    &kp W                        &kp B    &kp H    &kp APOSTR &kp SCLN  &kp COMMA
+
+            /* Thumbs row */
+            &lt REPEAT  &lt DELETE  &lt ESCAPE  &lt ENTER  &lt SPACE &lt REPEAT 
+        >;
+    };
+};
+
