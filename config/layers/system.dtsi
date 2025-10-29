@@ -1,0 +1,50 @@
+/*
+ ┌─────────────────────────────────────── System / Mods ────────────────────────────────────────┐
+ │                                                                                              │
+ │   ╭────────────── LEFT HAND ───────────────╮    ╭────────────── RIGHT HAND ───────────────╮  │
+ │                                                                                              │
+ │   Top:    VOL↓     VOL↑    MUTE  PLAY/PAUSE  •     •     BRITE↓  BRITE↑    •      •          │
+ │   Home:    │C│     │A│     │G│      │S│                   │S│     │G│     │A│    │C│         │
+ │   Bottom:  BT1     BT2     BT3      BT4     BT5    •       •       •       •      •          │
+ │                                                                                              │
+ │   Thumbs: [REPEAT] [DELETE] [ESC]                [ENTER] [SPACE] [REPEAT]                    │
+ │              ^left cluster^                           ^right cluster^                        │
+ │                                                                                              │
+ │  ─────────────────────────────────────────────────────────────────────────────────────────── │
+ │  Legend:                                                                                     │
+ │   &kp <KEY>        → normal keypress                                                         │
+ │   &hm MOD <KEY>    → tap = key, hold = modifier (home row mod)                               │
+ │   &bt BT_SEL <N>   → bluetooth profile selection                                             │
+ │   CAGS             → Control, Alt, GUI/Cmd, Shift (left to right)                            │
+ │   Reversed SGAC    → Shift, GUI/Cmd, Alt, Control (right hand mirror)                        │
+ │                                                                                              │
+ └──────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+
+ / {
+    system: system{
+        display-name = "System / Mods";
+        bindings = <
+
+            /* Top Row */
+            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+            &kp C_VOL_DN       &kp C_VOL_UP     &kp C_MUTE      &kp C_PP          &trans             &trans       &kp C_BRI_DN      &kp C_BRI_UP    &trans          &trans
+
+
+            /* Home Row */
+            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+            &sk LCTRL          &sk LALT         &sk LGUI        &sk LSHFT         &trans             &trans       &sk RSHFT         &sk RGUI        &sk RALT        &sk RCTRL 
+
+
+            /* Bottom Row */
+            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+            &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3      &bt BT_SEL 4       &trans       &trans            &trans          &trans          &trans
+
+
+            /* Thumbs */
+            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+
+                                                     &kp RPT     &lt NAV BSPC    &lt SYM ESC        &lt FN ENTER    &lt MAGIC SPACE   &magic_key
+        >;
+    };
+};
