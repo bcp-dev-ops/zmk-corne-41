@@ -1,21 +1,21 @@
-/* # Currently implementing STRDY alpha layout */
-/* See: https://oxey.dev/sturdy/index.html */
 /*
- ┌──────────────────────────────────────────── ALPHA ────────────────────────────────────────┐
+
+ ┌─────────────────────────────────────────── NUMBER ────────────────────────────────────────┐
  │                                                                                           │
  │   ╭────────────── LEFT HAND ───────────────╮    ╭────────────── RIGHT HAND ───────────────╮
  │                                                                                           │
- │   Top:     V     M     L     C     P             X     F     O     U     J                │
- │   Home:    S     T     R     D     Y             •     N     A     E     I                │
+ │   Top:     1     2     3     4     5             6     7     8     9     0                │
+ │   Home:    1     2     3     4     5             6     7     8     9     0                │
  │           │C│   │A│   │G│   │S│                       │S│   │G│   │A│   │C│               │
- │   Bottom:  Z     K     Q     G     W             B     H     '     ;     ,                │
+ │   Bottom:  1     2     3     4     5             6     7     8     9     0                │
  │                                                                                           │
  │   Thumbs: [REPEAT] [DELETE] [ESC]                [ENTER] [SPACE] [REPEAT]                 │
- │              ^left cluster^             ^right cluster^                                   │
+ │              ^left cluster^                           ^right cluster^                     │
  │                                                                                           │
  │  ──────────────────────────────────────────────────────────────────────────────────────── │
  │  Legend:                                                                                  │
  │   &kp <KEY>     → normal keypress                                                         │
+ │   &hm MOD <KEY> → tap = key, hold = modifier                                              │
  │   &lt LAYER <KEY> → tap = key, hold = activate layer                                      │
  │   &magic_key     → custom macro / layer trigger                                           │
  │   [REPEAT]       → repeats last key or macro                                              │
@@ -24,29 +24,28 @@
 */
 
  / {
-    alpha: alpha {
-        display-name = "Alpha STRDY";
+    numbers: numbers {
         bindings = <
 
             /* Top Row */
             /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &kp V              &kp M            &kp L           &kp C             &kp P              &kp X        &kp F             &kp O           &kp U           &kp J
+            &kp N1             &kp N2           &kp N3          &kp N4            &kp N5             &kp N6       &kp N7            &kp N8          &kp N9          &kp N0
 
 
             /* Home Row */
             /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &hm LCTRL S        &hm LALT T       &hm LGUI R      &hm LSHFT D       &kp Y              &kp DOT      &hm RSHFT N       &hm RGUI A      &hm RALT E      &hm RCTRL I
+            &hm LCTRL N1       &hm LALT N2      &hm LGUI N3     &hm LSHIFT N4     &kp N5             &kp N6       &hm RSHIFT N7     &hm RGUI N8     &hm RALT N9     &hm RCTRL N0
 
 
             /* Bottom Row */
             /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &kp Z              &kp K            &kp Q           &kp G             &kp W              &kp B        &kp H             &kp APOSTR      &kp SCLN        &kp COMMA
+            &kp N1             &kp N2           &kp N3          &kp N4            &kp N5             &kp N6       &kp N7            &kp N8          &kp N9          &kp N0
 
 
             /* Thumbs */
             /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
 
-                                                     &lt REPEAT      &lt DELETE      &lt ESCAPE         &lt ENTER      &lt SPACE         &lt REPEAT
+                                                     &kp RPT     &lt NAV BSPC    &lt SYM ESC        &lt FN ENTER    &lt MAGIC SPACE   &magic_key
         >;
     };
 };

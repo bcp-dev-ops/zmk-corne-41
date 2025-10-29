@@ -1,0 +1,47 @@
+/ {
+    macros {
+        vim_buffer_cycle_backwards: vim_buffer_cycle_backwards {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LBKT &kp B>;
+        };
+
+        vim_buffer_cycle_forwards: vim_buffer_cycle_forwards {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp RBKT &kp B>;
+        };
+
+        vim_window_left: vim_window_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp H>
+                     , <&macro_release &kp LALT>;
+        };
+
+        vim_window_down: vim_window_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp J>
+                     , <&macro_release &kp LALT>;
+        };
+
+        vim_window_up: vim_window_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp K>
+                     , <&macro_release &kp LALT>;
+        };
+
+        vim_window_right: vim_window_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp L>
+                     , <&macro_release &kp LALT>;
+        };
+    };
+};
