@@ -1,0 +1,22 @@
+mouse_slow {
+    bindings = <
+
+        /* Top Row */
+        /* ------------------------LEFT HAND -------*/    /* ------------------------RIGHT HAND -------------------------------------------------*/
+        &trans   &trans   &trans   &trans   &trans           &trans   &trans              &mmv MOVE_Y(-900)  &trans             &trans
+
+        /* Home Row */
+        /* ------------------------LEFT HAND -------*/    /* ------------------------RIGHT HAND -------------------------------------------------*/
+        &trans   &trans   &trans   &trans   &trans           &trans   &mmv MOVE_X(-900)   &mmv MOVE_Y(900)   &mmv MOVE_X(900)   &trans
+
+        /* Bottom Row */
+        /* ------------------------LEFT HAND -------*/    /* ------------------------RIGHT HAND -------------------------------------------------*/
+        &trans   &trans   &trans   &trans   &trans           &trans   &trans              &trans             &trans             &trans
+
+
+        /* Thumbs */
+        /* ------------------------LEFT HAND -------*/    /* ------------------------RIGHT HAND -------------------------------------------------*/
+                          &trans   &trans   &trans           &trans   &trans              &trans
+
+    >;
+};

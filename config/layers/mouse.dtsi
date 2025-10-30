@@ -1,44 +1,21 @@
-/*
+mouse {
+    bindings = <
 
- ┌─────────────────────────────────────────── MOUSE ─────────────────────────────────────────┐
- │                                                                                           │
- │   ╭────────────── LEFT HAND ───────────────╮    ╭────────────── RIGHT HAND ───────────────╮
- │                                                                                           │
- │   Top:                                                                                    │
- │   Home:                                                                                   │
- │   Bottom:                                                                                 │
- │                                                                                           │
- │   Thumbs:                                                                                 │
- │                                                                                           │
- │  ──────────────────────────────────────────────────────────────────────────────────────── │
- │  Placeholder for future mouse layer implementation                                        │
- │                                                                                           │
- └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+        /* Top Row */
+        /* ------------------------LEFT HAND --------------------------*/   /* ------------------------RIGHT HAND -------------------------------------------------*/
+        &none       &none      &none      &none         &none                 &none            &none             &none           &none             &none
 
- / {
-    mouse: mouse {
-        bindings = <
+        /* Home Row */
+        /* ------------------------LEFT HAND --------------------------*/   /* ------------------------RIGHT HAND -------------------------------------------------*/
+        &sk LALT    &trans     &sk LCMD   &sk LCTRL     &none                 &mmv MOVE_LEFT   &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT   &mkp MCLK
 
-            /* Top Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &trans             &trans           &trans          &trans            &trans             &trans       &trans            &trans          &trans          &trans
+        /* Bottom Row */
+        /* ------------------------LEFT HAND --------------------------*/   /* ------------------------RIGHT HAND -------------------------------------------------*/
+        &none       &none      &none      &none         &none                 &none            &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP      &msc SCRL_RIGHT
 
+        /* Thumbs */
+        /* ------------------------LEFT HAND --------------------------*/   /* ------------------------RIGHT HAND -------------------------------------------------*/
+                               &trans     &trans        &mo MOUSESLOW         &mkp LCLK        &mkp RCLK         &trans
 
-            /* Home Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &trans             &trans           &trans          &trans            &trans             &trans       &trans            &trans          &trans          &trans
-
-
-            /* Bottom Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &trans             &trans           &trans          &trans            &trans             &trans       &trans            &trans          &trans          &trans
-
-
-            /* Thumbs */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-
-                                                     &trans          &trans            &trans             &trans          &trans            &trans
-        >;
-    };
+    >;
 };

@@ -1,8 +1,0 @@
-/* combined combo node definition */
-/ {
-    combos {
-        compatible = "zmk,combos";
-        #include "combos/init.dtsi"
-    };
-};
-

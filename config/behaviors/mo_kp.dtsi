@@ -1,0 +1,8 @@
+mo_kp: momentary_hold_key_press_hold {
+     compatible = "zmk,behavior-hold-tap";
+     #binding-cells = <2>;
+     flavor = "hold-preferred";
+     tapping-term-ms = <180>;
+     quick-tap-ms = <180>;
+     bindings = <&mo>, <&kp>;
+};

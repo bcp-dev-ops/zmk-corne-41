@@ -1,51 +1,22 @@
-/*
+symbols: symbols {
+    bindings = <
 
- ┌─────────────────────────────────────────── SYMBOL ────────────────────────────────────────┐
- │                                                                                           │
- │   ╭────────────── LEFT HAND ───────────────╮    ╭────────────── RIGHT HAND ───────────────╮
- │                                                                                           │
- │   Top:     `     <     >     -     |             ^     {     }     $     →                │
- │   Home:    !     *     /     =     &             #     (     )     ;     "                │
- │           │C│   │A│   │G│   │S│                       │S│   │G│   │A│   │C│               │
- │   Bottom:  ~     +     [     ]     %             @     :     '     .     ,                │
- │                                                                                           │
- │   Thumbs: [REPEAT] [DELETE] [ESC]                [ENTER] [SPACE] [REPEAT]                 │
- │              ^left cluster^                           ^right cluster^                     │
- │                                                                                           │
- │  ──────────────────────────────────────────────────────────────────────────────────────── │
- │  Legend:                                                                                  │
- │   &kp <KEY>     → normal keypress                                                         │
- │   &lt LAYER <KEY> → tap = key, hold = activate layer                                      │
- │   &magic_key     → custom macro / layer trigger                                           │
- │   [REPEAT]       → repeats last key or macro                                              │
- │                                                                                           │
- └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+        /* Top Row */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+        &none             &kp EXCL        &kp LBRC       &kp RBRC         &none                   &none            &kp PERCENT       &kp PLUS        &kp EQUAL       &none
 
- / {
-    symbols: symbols {
-        bindings = <
+        /* Home Row */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+        &kp UNDER         &kp AMPS        &kp LPAR       &kp RPAR         &kp TILDE               &kp CARET        &kp STAR          &kp HASH        &kp DOLLAR      &kp MINUS
 
-            /* Top Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &kp GRAVE          &kp LT           &kp GT          &kp MINUS         &kp "|"            &kp CARET    &kp LBRC          &kp RBRC        &kp DOLLAR      &kp RIGHT_ARROW
+        /* Bottom Row */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+        &kp SEMICOLON     &mt LALT AT     &mt LCMD LBKT  &mt LCMD RBKT    &kp PIPE                &kp BACKSLASH    &mt LCMD LT       &mt LCMD GT     &mt LALT DQT    &kp COLON
 
 
-            /* Home Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &hm LCTRL EXCL     &hm LALT ASTRK   &hm LGUI SLASH  &hm LSHIFT EQUAL  &kp AMPS           &kp HASH     &kp RSHFT LPAREN  &kp RGUI RPAREN &hm RALT SEMI   &hm RCTRL DQT
+        /* Thumbs */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+                                          &trans         &trans           &trans                  &trans           &trans            &trans
 
-
-            /* Bottom Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &std_coloncolons   &kp TILDE        &kp PLUS        &kp LBKT          &kp RBKT           &kp AT       &kp COLON  &kp SQT    &kp DOT    &kp COMMA
-
-
-            /* Thumbs */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-
-                                                      &kp RPT     &lt NAV BSPC    &lt SYM ESC        &lt FN ENTER    &lt MAGIC SPACE   &magic_key
-        >;
-    };
+    >;
 };
-
