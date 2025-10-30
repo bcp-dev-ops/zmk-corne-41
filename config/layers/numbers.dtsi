@@ -1,28 +1,26 @@
-#include "config/behaviors/sk.dtsi"
-#include "config/behaviors/mt.dtsi"
+/* Implements Solid numbers layout */
+/* See: https://github.com/vladsolokha/zmk-config/tree/main */
 
- / {
-    numbers: numbers {
-        bindings = <
+numbers: numbers {
+    display-name = "Numbers";
+    bindings = <
 
-            /* Top Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &none             &none           &none          &none            &none                   &none        &kp N7            &kp N8          &kp N9          &none
+        /* Top Row */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+        &none             &none           &none          &none            &none                   &none        &kp N7            &kp N8          &kp N9          &none
 
-            /* Home Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &none             &sk LALT        &sk LCMD       &none            &none                   &kp MINUS    &kp N4            &kp N5          &kp N6          &kp N0
+        /* Home Row */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+        &none             &sk LALT        &sk LCMD       &none            &none                   &kp MINUS    &kp N4            &kp N5          &kp N6          &kp N0
 
-            /* Bottom Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &none             &none           &none          &none            &none                   &kp DOT      &kp N1            &kp N2          &kp N3          &kp N0
+        /* Bottom Row */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+        &none             &none           &none          &none            &none                   &kp DOT      &kp N1            &kp N2          &kp N3          &kp N0
 
 
-            /* Thumbs */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-                                              &trans         &trans           &trans                  &trans        &trans           &trans     
+        /* Thumbs */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+                                          &trans         &trans           &trans                  &trans        &trans           &trans     
 
-        >;
-    };
+    >;
 };
-

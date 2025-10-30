@@ -1,6 +1,9 @@
-mouse_slow {
-    bindings = <
+/* Implements Solid mouse (slow) layout */
+/* See: https://github.com/vladsolokha/zmk-config/tree/main */
 
+mouse_slow: mouse_slow {
+    display-name = "Mouse Slow";
+    bindings = <
         /* Top Row */
         /* ------------------------LEFT HAND -------*/    /* ------------------------RIGHT HAND -------------------------------------------------*/
         &trans   &trans   &trans   &trans   &trans           &trans   &trans              &mmv MOVE_Y(-900)  &trans             &trans
@@ -17,6 +20,6 @@ mouse_slow {
         /* Thumbs */
         /* ------------------------LEFT HAND -------*/    /* ------------------------RIGHT HAND -------------------------------------------------*/
                           &trans   &trans   &trans           &trans   &trans              &trans
-
     >;
+
 };

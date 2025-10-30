@@ -1,6 +1,9 @@
-mouse {
-    bindings = <
+/* Implements Solid mouse layout */
+/* See: https://github.com/vladsolokha/zmk-config/tree/main */
 
+mouse: mouse {
+    display-name = "Mouse";
+    bindings = <
         /* Top Row */
         /* ------------------------LEFT HAND --------------------------*/   /* ------------------------RIGHT HAND -------------------------------------------------*/
         &none       &none      &none      &none         &none                 &none            &none             &none           &none             &none
@@ -16,6 +19,5 @@ mouse {
         /* Thumbs */
         /* ------------------------LEFT HAND --------------------------*/   /* ------------------------RIGHT HAND -------------------------------------------------*/
                                &trans     &trans        &mo MOUSESLOW         &mkp LCLK        &mkp RCLK         &trans
-
     >;
 };

@@ -1,56 +1,28 @@
-/*
+/* Implements custom navigation layer for common vim interactions */
+/* */
 
- ┌───────────────────────────────────────── NAVIGATION VIM ─────────────────────────────────────────┐
- │                                                                                                   │
- │   ╭────────────── LEFT HAND ───────────────╮    ╭────────────── RIGHT HAND ───────────────╮     │
- │                                                                                                   │
- │   Top:   ___    ___    ___    ___    ___          [,B     P      N      #      *                │
- │   Home:   ___    ___    ___    ___    ___          ],B     H      J      K      L                │
- │                                                           │S│    │G│    │A│    │C│               │
- │   Bottom: ___    ___    ___    ___    ___          ___    A+H    A+J    A+K    A+L               │
- │                                                                                                   │
- │   Thumbs: [REPEAT] [DELETE] [ESC]                [ENTER] [SPACE] [REPEAT]                        │
- │              ^left cluster^                           ^right cluster^                            │
- │                                                                                                   │
- │  ─────────────────────────────────────────────────────────────────────────────────────────────── │
- │  Legend:                                                                                         │
- │   &kp <KEY>          → normal keypress                                                           │
- │   &hm MODIFIER <KEY> → home row mod: tap = key, hold = modifier                                  │
- │   &vim_*             → custom vim navigation macro                                               │
- │   [,B                → [ then B (vim command)                                                    │
- │   ],B                → ] then B (vim command)                                                    │
- │   A+H                → Alt + H (vim window navigation)                                           │
- │   [REPEAT]           → repeats last key or macro                                                 │
- │                                                                                                   │
- └───────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+navigation_vim: navigation_vim {
+    display-name = "Navigation Vim";
+    bindings = <
 
-#include "../macros/init.dtsi"
-
-/ {
-
-    navigation_vim: navigation_vim {
-        bindings = <
-
-            /* Top Row */
-            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
-            &trans                          &trans                          &trans                    &trans                   &trans                 &vim_buffer_cycle_backwards   &kp P               &kp N              &kp HASH            &kp ASTRK
+        /* Top Row */
+        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
+        &trans                          &trans                          &trans                    &trans                   &trans                 &vim_buffer_cycle_backwards   &kp P               &kp N              &kp HASH            &kp ASTRK
 
 
-            /* Home Row */
-            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
-            &trans                          &trans                          &trans                    &trans                   &trans                 &vim_buffer_cycle_forwards    &hm RSHIFT H        &hm RGUI J         &hm RALT K          &hm RCTRL L
+        /* Home Row */
+        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
+        &trans                          &trans                          &trans                    &trans                   &trans                 &vim_buffer_cycle_forwards    &hm RSHIFT H        &hm RGUI J         &hm RALT K          &hm RCTRL L
 
 
-            /* Bottom Row */
-            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
-            &trans                          &trans                          &trans                    &trans                   &trans                 &trans                        &vim_window_left    &vim_window_down   &vim_window_up      &vim_window_right
+        /* Bottom Row */
+        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
+        &trans                          &trans                          &trans                    &trans                   &trans                 &trans                        &vim_window_left    &vim_window_down   &vim_window_up      &vim_window_right
 
 
-            /* Thumbs */
-            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
+        /* Thumbs */
+        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
 
-                                                                            &kp RPT                   &lt NAV BSPC             &lt SYM ESC            &lt FN ENTER        &lt MAGIC SPACE      &magic_key
-        >;
-    };
+                                                                        &kp RPT                   &lt NAV BSPC             &lt SYM ESC            &lt FN ENTER        &lt MAGIC SPACE      &magic_key
+    >;
 };

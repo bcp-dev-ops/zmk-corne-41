@@ -1,7 +1,7 @@
-/* # Currently implementing STRDY alpha layout */
+/* Implements STRDY alpha layout */
 /* See: https://oxey.dev/sturdy/index.html */
 
-alpha: alpha {
+alpha_strdy: alpha_strdy {
     display-name = "Alpha STRDY";
     bindings = <
 

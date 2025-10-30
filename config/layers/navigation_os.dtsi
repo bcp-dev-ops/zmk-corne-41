@@ -1,58 +1,28 @@
-/*
+/* Implements custom navigation layer for common os interactions */
+/* */
 
- ┌─────────────────────────────────────── NAVIGATION SYSTEM ────────────────────────────────────────┐
- │                                                                                                   │
- │   ╭────────────── LEFT HAND ───────────────╮    ╭────────────── RIGHT HAND ───────────────╮     │
- │                                                                                                   │
- │   Top:  S+A+TAB A+TAB  C+E,P  C+E,N  CMD+[        PgUp    ___    ___    ___    ___              │
- │   Home:   ___    ___    ___    ___   CMD+]        PgDn    ←      ↓      ↑      →                │
- │                                                                  │S│    │G│    │A│    │C│         │
- │   Bottom: C+E,H  C+E,J  C+E,K  C+E,L  ___         ___    W-←    W-↓    W-↑    W-→               │
- │                                                                                                   │
- │   Thumbs: [REPEAT] [DELETE] [ESC]                [ENTER] [SPACE] [REPEAT]                        │
- │              ^left cluster^                           ^right cluster^                            │
- │                                                                                                   │
- │  ─────────────────────────────────────────────────────────────────────────────────────────────── │
- │  Legend:                                                                                         │
- │   &kp <KEY>          → normal keypress                                                           │
- │   &hm MODIFIER <KEY> → home row mod: tap = key, hold = modifier                                  │
- │   &cycle_*           → custom app/space cycling macro                                            │
- │   &navigate_*        → custom window navigation macro                                            │
- │   S+A+TAB            → Shift + Alt + Tab                                                         │
- │   A+TAB              → Alt + Tab                                                                 │
- │   C+E,P              → Ctrl+E, then P (tmux prefix command)                                      │
- │   W-←                → Window navigation left                                                    │
- │   [REPEAT]           → repeats last key or macro                                                 │
- │                                                                                                   │
- └───────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+navigation_os: navigation_os{
+    display-name = "Navigation OS";
+    bindings = <
 
-#include "../macros/init.dtsi"
-
-/ {
-
-    navigation_system: navigation_system {
-        bindings = <
-
-            /* Top Row */
-            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
-            &cycle_app_switcher_backwards   &cycle_app_switcher_forwards    &cycle_space_backwards    &cycle_space_forwards    &app_tab_previous      &kp PG_UP           &trans              &trans             &trans              &trans
+        /* Top Row */
+        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
+        &cycle_app_switcher_backwards   &cycle_app_switcher_forwards    &cycle_space_backwards    &cycle_space_forwards    &app_tab_previous      &kp PG_UP           &trans              &trans             &trans              &trans
 
 
-            /* Home Row */
-            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
-            &trans                          &trans                          &trans                    &trans                   &app_tab_next          &kp PG_DN           &hm RSHIFT LEFT     &hm RGUI DOWN      &hm RALT UP         &hm RCTRL RIGHT
+        /* Home Row */
+        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
+        &trans                          &trans                          &trans                    &trans                   &app_tab_next          &kp PG_DN           &hm RSHIFT LEFT     &hm RGUI DOWN      &hm RALT UP         &hm RCTRL RIGHT
 
 
-            /* Bottom Row */
-            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
-            &navigate_window_left           &navigate_window_down           &navigate_window_up       &navigate_window_right   &trans                 &trans              &navigate_window_left    &navigate_window_down   &navigate_window_up      &navigate_window_right
+        /* Bottom Row */
+        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
+        &navigate_window_left           &navigate_window_down           &navigate_window_up       &navigate_window_right   &trans                 &trans              &navigate_window_left    &navigate_window_down   &navigate_window_up      &navigate_window_right
 
 
-            /* Thumbs */
-            /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
+        /* Thumbs */
+        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
 
-                                                                            &kp RPT                   &lt NAV BSPC             &lt SYM ESC            &lt FN ENTER        &lt MAGIC SPACE      &magic_key
-        >;
-    };
+                                                                        &kp RPT                   &lt NAV BSPC             &lt SYM ESC            &lt FN ENTER        &lt MAGIC SPACE      &magic_key
+    >;
 };

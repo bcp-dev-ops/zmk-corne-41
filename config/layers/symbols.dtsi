@@ -1,4 +1,8 @@
+/* Implements Solid symbols layout */
+/* See: https://github.com/vladsolokha/zmk-config/tree/main */
+
 symbols: symbols {
+    display-name = "Symbols";
     bindings = <
 
         /* Top Row */

@@ -1,44 +1,28 @@
-/*
+/* Placeholder for a future macro layer */
+/* */
 
- ┌────────────────────────────────────────── MACROPAD ───────────────────────────────────────┐
- │                                                                                           │
- │   ╭────────────── LEFT HAND ───────────────╮    ╭────────────── RIGHT HAND ───────────────╮
- │                                                                                           │
- │   Top:                                                                                    │
- │   Home:                                                                                   │
- │   Bottom:                                                                                 │
- │                                                                                           │
- │   Thumbs:                                                                                 │
- │                                                                                           │
- │  ──────────────────────────────────────────────────────────────────────────────────────── │
- │  Placeholder for future macropad layer implementation                                     │
- │                                                                                           │
- └───────────────────────────────────────────────────────────────────────────────────────────┘
-*/
+macropad: macropad {
+    display-name = "Macropad";
+    bindings = <
 
- / {
-    macropad: macropad {
-        bindings = <
-
-            /* Top Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &trans             &trans           &trans          &trans            &trans             &trans       &trans            &trans          &trans          &trans
+        /* Top Row */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+        &trans             &trans           &trans          &trans            &trans             &trans       &trans            &trans          &trans          &trans
 
 
-            /* Home Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &trans             &trans           &trans          &trans            &trans             &trans       &trans            &trans          &trans          &trans
+        /* Home Row */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+        &trans             &trans           &trans          &trans            &trans             &trans       &trans            &trans          &trans          &trans
 
 
-            /* Bottom Row */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-            &trans             &trans           &trans          &trans            &trans             &trans       &trans            &trans          &trans          &trans
+        /* Bottom Row */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+        &trans             &trans           &trans          &trans            &trans             &trans       &trans            &trans          &trans          &trans
 
 
-            /* Thumbs */
-            /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+        /* Thumbs */
+        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
 
-                                                     &trans          &trans            &trans             &trans          &trans            &trans
-        >;
-    };
+                                                 &trans          &trans            &trans             &trans          &trans            &trans
+    >;
 };
