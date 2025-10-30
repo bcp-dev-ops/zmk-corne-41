@@ -2,7 +2,7 @@
 / {
     combos {
         compatible = "zmk,combos";
-        #include "combos/escape.dtsi"
+        #include "combos/init.dtsi"
     };
 };
 

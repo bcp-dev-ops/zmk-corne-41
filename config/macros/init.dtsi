@@ -1,0 +1,7 @@
+#include "apps_common.dtsi"
+#include "apps_switcher.dtsi"
+#include "capitalization.dtsi"
+#include "clipboard.dtsi"
+#include "keys.dtsi"
+#include "spaces.dtsi"
+#include "vim.dtsi"
