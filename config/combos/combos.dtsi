@@ -1,0 +1,8 @@
+/* combined combo node definition */
+/ {
+    combos {
+        compatible = "zmk,combos";
+        #include "combos/escape.dtsi"
+    };
+};
+

@@ -1,0 +1,20 @@
+/ {
+    macros {
+        cycle_app_switcher_backwards: cycle_app_switcher_backwards {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LSHIFT &kp LALT>
+                     , <&macro_tap &kp TAB>
+                     , <&macro_release &kp LALT &kp LSHIFT>;
+        };
+        cycle_app_switcher_forwards: cycle_app_switcher_forwards {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>
+                     , <&macro_tap &kp TAB>
+                     , <&macro_release &kp LALT>;
+        };
+
+    };
+};
+

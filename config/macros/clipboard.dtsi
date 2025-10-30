@@ -1,0 +1,27 @@
+/ {
+    macros {
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>
+                     , <&macro_tap &kp C>
+                     , <&macro_release &kp LGUI>;
+        };
+
+        cut: cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>
+                     , <&macro_tap &kp X>
+                     , <&macro_release &kp LGUI>;
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>
+                     , <&macro_tap &kp V>
+                     , <&macro_release &kp LGUI>;
+        };
+    };
+};

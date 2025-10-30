@@ -29,8 +29,10 @@
  └───────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 
-#include "../macros/navigation_os.dtsi"
-#include "../macros/navigation_vim.dtsi"
+#include "../macros/apps_switcher.dtsi"
+#include "../macros/apps_common.dtsi"
+#include "../macros/spaces.dtsi"
+#include "../macros/vim.dtsi"
 
 / {
 

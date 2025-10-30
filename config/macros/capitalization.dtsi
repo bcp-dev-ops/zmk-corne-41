@@ -1,0 +1,15 @@
+/ {
+    macros {
+        sticky_shift: sticky_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &sk LSHFT>;
+        };
+
+        caps_lock_toggle: caps_lock_toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CAPS>;
+        };
+    };
+};

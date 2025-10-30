@@ -1,0 +1,19 @@
+/ {
+    macros {
+        app_tab_previous: app_tab_previous {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>
+                     , <&macro_tap &kp LBKT>
+                     , <&macro_release &kp LGUI>;
+        };
+
+        app_tab_next: app_tab_next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>
+                     , <&macro_tap &kp RBKT>
+                     , <&macro_release &kp LGUI>;
+        };
+    };
+};
