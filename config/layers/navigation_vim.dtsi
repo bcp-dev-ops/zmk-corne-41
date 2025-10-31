@@ -4,25 +4,20 @@
 navigation_vim: navigation_vim {
     display-name = "Navigation Vim";
     bindings = <
-
         /* Top Row */
-        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
-        &trans                          &trans                          &trans                    &trans                   &trans                 &vim_buffer_cycle_backwards   &kp P               &kp N              &kp HASH            &kp ASTRK
-
+        /* ----------LEFT HAND --------------------/*  /* -----------RIGHT HAND ---------------------------------------------------------------------------------*/
+           &none   &none   &none   &none   &none          &kp P             &kp N              &vim_buffer_cycle_backwards   &vim_buffer_cycle_forwards   &none        
 
         /* Home Row */
-        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
-        &trans                          &trans                          &trans                    &trans                   &trans                 &vim_buffer_cycle_forwards    &hm RSHIFT H        &hm RGUI J         &hm RALT K          &hm RCTRL L
-
+        /* ----------LEFT HAND --------------------/*  /* -----------RIGHT HAND ---------------------------------------------------------------------------------*/
+           &none   &none   &none   &none   &none          &kp H             &kp J              &kp K                         &kp L                        &none
 
         /* Bottom Row */
-        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
-        &trans                          &trans                          &trans                    &trans                   &trans                 &trans                        &vim_window_left    &vim_window_down   &vim_window_up      &vim_window_right
-
+        /* ----------LEFT HAND --------------------/*  /* -----------RIGHT HAND ---------------------------------------------------------------------------------*/
+           &none   &sk LALT &sk LCMD &sk LCMD &none       &vim_window_left  &vim_window_down   &vim_window_up                &vim_window_right            &none
 
         /* Thumbs */
-        /* ------------------------LEFT HAND -----------------------------------------------------------------------------------------------*/    /* ------------------------RIGHT HAND -------------------------------------------------------------------*/
-
-                                                                        &kp RPT                   &lt NAV BSPC             &lt SYM ESC            &lt FN ENTER        &lt MAGIC SPACE      &magic_key
+        /* ----------LEFT HAND --------------------/*  /* -----------RIGHT HAND ---------------------------------------------------------------------------------*/
+                           &trans  &trans  &trans         &trans            &trans             &trans
     >;
 };

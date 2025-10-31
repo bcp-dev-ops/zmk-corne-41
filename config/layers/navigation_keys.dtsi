@@ -1,0 +1,25 @@
+/* Implements custom navigation layer for common os interactions */
+/* */
+
+navigation_keys: navigation_keys {
+    display-name = "Navigation Keys";
+    bindings = <
+
+        /* Top Row */
+        /* ------------------------LEFT HAND --------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+           &none    &kp INSERT        &none    &none         &none       &none             &kp END         &kp HOME      &none       &none
+
+        /* Home Row */
+        /* ------------------------LEFT HAND --------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+           &none    &mt LALT RETURN   &trans   &mt LCMD TAB  &none       &kp LEFT          &kp DOWN        &kp UP        &kp RIGHT   &none
+
+        /* Bottom Row */
+        /* ------------------------LEFT HAND ---------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+           &none    &kp ESC           &none    &kp DEL       &none       &none             &kp PAGE_DOWN   &kp PAGE_UP   &none       &none
+
+        /* Thumbs */
+        /* ------------------------LEFT HAND ---------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
+                                      &trans   &trans        &trans      &trans            &trans          &trans
+
+    >;
+};
