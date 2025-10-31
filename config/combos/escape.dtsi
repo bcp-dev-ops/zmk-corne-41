@@ -1,6 +1,0 @@
-combo_esc {
-    timeout-ms = <40>;
-    key-positions = <16 17>;
-    bindings = <&kp ESC>;
-    layers = <0 1 2 3>;
-};

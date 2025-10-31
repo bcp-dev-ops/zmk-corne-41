@@ -1,1 +1,17 @@
-#include "escape.dtsi"
+/* Left Hand Combos */
+combo_esc {
+    timeout-ms = <40>;
+    key-positions = <16 17>;
+    bindings = <&kp ESC>;
+    layers = <0 1 2 3 4 5 6 7 8 9>;
+};
+
+combo_save {
+    timeout-ms = <40>;
+    key-positions = <12 13>;
+    bindings = <&kp ESC>;
+    layers = <0 1 2 3 4 5 6 7 8 9>;
+};
+/* Right Hand Combos */
+/* Two Hand Combos*/
+
