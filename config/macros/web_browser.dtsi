@@ -1,23 +1,15 @@
-copy: copy {
+browser_history_back: browser_history_back {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&macro_press &kp LGUI>
-             , <&macro_tap &kp C>
+             , <&macro_tap &kp LBKT>
              , <&macro_release &kp LGUI>;
 };
 
-cut: cut {
+browser_history_forward: browser_history_forward {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&macro_press &kp LGUI>
-             , <&macro_tap &kp X>
-             , <&macro_release &kp LGUI>;
-};
-
-paste: paste {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_press &kp LGUI>
-             , <&macro_tap &kp V>
+             , <&macro_tap &kp RBKT>
              , <&macro_release &kp LGUI>;
 };

@@ -3,5 +3,7 @@
 #include "capitalization.dtsi"
 #include "clipboard.dtsi"
 #include "keys.dtsi"
+#include "read_write.dtsi"
 #include "spaces.dtsi"
 #include "vim.dtsi"
+#include "web_browser.dtsi"

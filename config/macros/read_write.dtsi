@@ -1,23 +1,15 @@
-copy: copy {
+open: open {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&macro_press &kp LGUI>
-             , <&macro_tap &kp C>
+             , <&macro_tap &kp O>
              , <&macro_release &kp LGUI>;
 };
 
-cut: cut {
+save: save {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&macro_press &kp LGUI>
-             , <&macro_tap &kp X>
-             , <&macro_release &kp LGUI>;
-};
-
-paste: paste {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <&macro_press &kp LGUI>
-             , <&macro_tap &kp V>
+             , <&macro_tap &kp S>
              , <&macro_release &kp LGUI>;
 };

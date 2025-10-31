@@ -6,11 +6,11 @@ navigation_vim: navigation_vim {
     bindings = <
         /* Top Row */
         /* ----------LEFT HAND --------------------/*  /* -----------RIGHT HAND ---------------------------------------------------------------------------------*/
-           &none   &none   &none   &none   &none          &kp P             &kp N              &vim_buffer_cycle_backwards   &vim_buffer_cycle_forwards   &none        
+           &none   &none   &none   &none     &none          &kp P             &kp N              &vim_buffer_cycle_backwards   &vim_buffer_cycle_forwards   &none        
 
         /* Home Row */
         /* ----------LEFT HAND --------------------/*  /* -----------RIGHT HAND ---------------------------------------------------------------------------------*/
-           &none   &none   &none   &none   &none          &kp H             &kp J              &kp K                         &kp L                        &none
+           &none   &none    &none   &none   &none          &kp H             &kp J              &kp K                         &kp L                        &none
 
         /* Bottom Row */
         /* ----------LEFT HAND --------------------/*  /* -----------RIGHT HAND ---------------------------------------------------------------------------------*/
