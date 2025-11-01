@@ -11,7 +11,7 @@ alpha_strdy: alpha_strdy {
 
         /* Home Row */
         /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-        &kp S                         &mo_kp_tap MOUSE T            &mo_kp_tap NAVIGATION_VIM R   &mo_kp_tap NUMBER D           &mo_kp_tap NAVIGATION_OS Y    &kp DOT                       &kp N                         &kp A                         &kp E                         &kp I
+        &kp S                         &mo_kp_tap MOUSE T            &mo_kp_tap NAVIGATION_VIM R   &mo_kp_tap NUMBERS D          &mo_kp_tap NAVIGATION_KEYS Y  &kp DOT                       &kp N                         &kp A                         &kp E                         &kp I
 
         /* Bottom Row */
         /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
@@ -20,7 +20,7 @@ alpha_strdy: alpha_strdy {
 
         /* Thumbs */
         /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-                                                                    &lt SYSTEM SPACE              &sticky_shift                 &lt SYMBOLS BACKSPACE         &sk_kp_tap LCTRL SPACE        &kp REPEAT                    &lt MACROS SPACE
+                                                                    &lt SYSTEM SPACE              &sticky_shift                 &lt SYMBOLS BACKSPACE         &sk_kp_tap LCTRL SPACE        &kp REPEAT                    &lt MACROPAD SPACE
 
     >;
 };
