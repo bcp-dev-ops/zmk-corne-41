@@ -1,57 +1,54 @@
-/ {
-    macros {
-        cycle_space_backwards: cycle_space_backwards {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>
-                     , <&macro_tap &kp E>
-                     , <&macro_release &kp LCTRL>
-                     , <&macro_tap &kp P>;
-        };
-        cycle_space_forwards: cycle_space_forwards {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>
-                     , <&macro_tap &kp E>
-                     , <&macro_release &kp LCTRL>
-                     , <&macro_tap &kp N>;
-        };
+cycle_space_backwards: cycle_space_backwards {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL>
+             , <&macro_tap &kp E>
+             , <&macro_release &kp LCTRL>
+             , <&macro_tap &kp P>;
+};
 
-        navigate_window_left: navigate_window_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>
-                     , <&macro_tap &kp E>
-                     , <&macro_release &kp LCTRL>
-                     , <&macro_tap &kp H>;
-        };
+cycle_space_forwards: cycle_space_forwards {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL>
+             , <&macro_tap &kp E>
+             , <&macro_release &kp LCTRL>
+             , <&macro_tap &kp N>;
+};
 
-        navigate_window_down: navigate_window_down {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>
-                     , <&macro_tap &kp E>
-                     , <&macro_release &kp LCTRL>
-                     , <&macro_tap &kp J>;
-        };
+navigate_window_left: navigate_window_left {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL>
+             , <&macro_tap &kp E>
+             , <&macro_release &kp LCTRL>
+             , <&macro_tap &kp H>;
+};
 
-        navigate_window_up: navigate_window_up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>
-                     , <&macro_tap &kp E>
-                     , <&macro_release &kp LCTRL>
-                     , <&macro_tap &kp K>;
-        };
-        navigate_window_right: navigate_window_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>
-                     , <&macro_tap &kp E>
-                     , <&macro_release &kp LCTRL>
-                     , <&macro_tap &kp L>;
-        };
+navigate_window_down: navigate_window_down {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL>
+             , <&macro_tap &kp E>
+             , <&macro_release &kp LCTRL>
+             , <&macro_tap &kp J>;
+};
 
-    };
+navigate_window_up: navigate_window_up {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL>
+             , <&macro_tap &kp E>
+             , <&macro_release &kp LCTRL>
+             , <&macro_tap &kp K>;
+};
+
+navigate_window_right: navigate_window_right {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_press &kp LCTRL>
+             , <&macro_tap &kp E>
+             , <&macro_release &kp LCTRL>
+             , <&macro_tap &kp L>;
 };
 
