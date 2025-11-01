@@ -15,7 +15,7 @@ numbers: numbers {
 
         /* Bottom Row */
         /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-        &none             &sk LALT        &sk LCMD       &sk LCMD         &kp DOT                 &kp N1       &kp N2            &kp N3          &kp N0
+        &none             &sk LALT        &sk LCMD       &sk LCMD         &kp DOT                 &kp N1       &kp N2            &kp N3          &kp N0          &none
 
 
         /* Thumbs */
