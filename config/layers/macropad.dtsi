@@ -1,6 +1,9 @@
 /* Placeholder for a future macro layer */
 /* */
 
+#include "behaviors/init.dtsi"
+#include "macros/init.dtsi"
+
 macropad: macropad {
     display-name = "Macropad";
     bindings = <
