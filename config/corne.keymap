@@ -15,6 +15,10 @@
 #define MOUSE_SLOW          8
 #define MACROPAD            9 
 
+
+#include "behaviors/_mt.dtsi"
+#include "behaviors/_sk.dtsi"
+
 / {
     combos {
         compatible = "zmk,combos";
