@@ -13,13 +13,13 @@
 #define SYSTEM              6
 #define MOUSE               7
 #define MOUSE_SLOW          8
-#define MACROPAD            9 
+#define MACROPAD            9
 
-
-#include "behaviors/_mt.dtsi"
-#include "behaviors/_sk.dtsi"
 
 / {
+    #include "behaviors/_mt.dtsi"
+    #include "behaviors/_sk.dtsi"
+
     combos {
         compatible = "zmk,combos";
         #include "combos/init.dtsi"
