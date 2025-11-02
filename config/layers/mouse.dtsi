@@ -18,6 +18,6 @@ mouse: mouse {
 
         /* Thumbs */
         /* ------------------------LEFT HAND --------------------------*/   /* ------------------------RIGHT HAND -------------------------------------------------*/
-                               &trans     &trans        &mo MOUSESLOW         &mkp LCLK        &mkp RCLK         &trans
+                               &trans     &trans        &mo MOUSE_SLOW        &mkp LCLK        &mkp RCLK         &trans
     >;
 };
