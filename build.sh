@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-BOARD=nice_nano_v2
+BOARD=nice_nano
 SHIELD_LEFT=corne_left
 SHIELD_RIGHT=corne_right
 ZMK_DIR=../zmk
