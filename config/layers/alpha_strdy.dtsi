@@ -1,8 +1,6 @@
 /* Implements STRDY alpha layout */
 /* See: https://oxey.dev/sturdy/index.html */
 
-#include "../macros/init.dtsi"
-
 alpha_strdy: alpha_strdy {
     display-name = "Alpha STRDY";
     bindings = <

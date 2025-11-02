@@ -1,8 +1,6 @@
 /* To bei implemented */
 /* */
 
-#include "../macros/init.dtsi"
-
 navigation_windows: navigation_windows {
     display-name = "Navigation Windows";
     bindings = <

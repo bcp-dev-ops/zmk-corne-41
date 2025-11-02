@@ -1,8 +1,6 @@
 /* Implements Solid symbols layout */
 /* See: https://github.com/vladsolokha/zmk-config/tree/main */
 
-#include "../macros/init.dtsi"
-
 symbols: symbols {
     display-name = "Symbols";
     bindings = <

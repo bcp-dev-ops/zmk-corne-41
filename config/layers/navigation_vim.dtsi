@@ -1,8 +1,6 @@
 /* Implements custom navigation layer for common vim interactions */
 /* */
 
-#include "../macros/init.dtsi"
-
 navigation_vim: navigation_vim {
     display-name = "Navigation Vim";
     bindings = <

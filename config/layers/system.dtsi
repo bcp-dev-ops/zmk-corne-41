@@ -1,8 +1,6 @@
 /* Implements custom system layer for common hardware interactions */
 /* */
 
-#include "../macros/init.dtsi"
-
 system: system {
     display-name = "System";
     bindings = <

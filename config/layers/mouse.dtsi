@@ -1,8 +1,6 @@
 /* Implements Solid mouse layout */
 /* See: https://github.com/vladsolokha/zmk-config/tree/main */
 
-#include "../macros/init.dtsi"
-
 mouse: mouse {
     display-name = "Mouse";
     bindings = <
