@@ -3,6 +3,9 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/pointing.h>
+#include "behaviors/_mt.dtsi"
+#include "behaviors/_sk.dtsi"
+#include <behaviors.dtsi>
 
 #define ALPHA_STRDY         0
 #define NUMBERS             1
@@ -15,11 +18,9 @@
 #define MOUSE_SLOW          8
 #define MACROPAD            9
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800
 
 / {
-    #include "behaviors/_mt.dtsi"
-    #include "behaviors/_sk.dtsi"
-
     combos {
         compatible = "zmk,combos";
         #include "combos/init.dtsi"
@@ -43,4 +44,5 @@
         #include "layers/mouse_slow.dtsi"
         #include "layers/macropad.dtsi"
     };
-}
+};
+
