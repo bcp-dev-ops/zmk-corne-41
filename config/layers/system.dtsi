@@ -1,7 +1,6 @@
 /* Implements custom system layer for common hardware interactions */
 /* */
 
-#include "../behaviors/init.dtsi"
 #include "../macros/init.dtsi"
 
 system: system {

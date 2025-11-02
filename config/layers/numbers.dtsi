@@ -1,7 +1,6 @@
 /* Implements Solid numbers layout */
 /* See: https://github.com/vladsolokha/zmk-config/tree/main */
 
-#include "../behaviors/init.dtsi"
 #include "../macros/init.dtsi"
 
 numbers: numbers {

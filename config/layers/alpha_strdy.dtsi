@@ -1,7 +1,6 @@
 /* Implements STRDY alpha layout */
 /* See: https://oxey.dev/sturdy/index.html */
 
-#include "../behaviors/init.dtsi"
 #include "../macros/init.dtsi"
 
 alpha_strdy: alpha_strdy {
