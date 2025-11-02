@@ -1,4 +1,3 @@
-#include "caps_word.dtsi"
 #include "mo_kp.dtsi"
 #include "mo_kp_tap.dtsi"
 #include "mt.dtsi"
