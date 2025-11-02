@@ -1,8 +1,8 @@
 /* Implements Solid mouse (slow) layout */
 /* See: https://github.com/vladsolokha/zmk-config/tree/main */
 
-#include "behaviors/init.dtsi"
-#include "macros/init.dtsi"
+#include "../behaviors/init.dtsi"
+#include "../macros/init.dtsi"
 
 mouse_slow: mouse_slow {
     display-name = "Mouse Slow";

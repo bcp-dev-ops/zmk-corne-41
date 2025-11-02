@@ -1,8 +1,8 @@
 /* Implements custom navigation layer for common vim interactions */
 /* */
 
-#include "behaviors/init.dtsi"
-#include "macros/init.dtsi"
+#include "../behaviors/init.dtsi"
+#include "../macros/init.dtsi"
 
 navigation_vim: navigation_vim {
     display-name = "Navigation Vim";

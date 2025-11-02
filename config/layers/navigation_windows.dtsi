@@ -1,8 +1,8 @@
 /* To bei implemented */
 /* */
 
-#include "behaviors/init.dtsi"
-#include "macros/init.dtsi"
+#include "../behaviors/init.dtsi"
+#include "../macros/init.dtsi"
 
 navigation_windows: navigation_windows {
     display-name = "Navigation Windows";

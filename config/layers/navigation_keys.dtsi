@@ -1,8 +1,8 @@
 /* Implements custom navigation layer for common os interactions */
 /* */
 
-#include "behaviors/init.dtsi"
-#include "macros/init.dtsi"
+#include "../behaviors/init.dtsi"
+#include "../macros/init.dtsi"
 
 navigation_keys: navigation_keys {
     display-name = "Navigation Keys";
