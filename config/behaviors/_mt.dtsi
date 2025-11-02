@@ -1,3 +1,5 @@
+#include <behaviors.dtsi>
+
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <220>;
