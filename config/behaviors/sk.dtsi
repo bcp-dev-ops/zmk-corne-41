@@ -1,4 +1,4 @@
-&sk {
+sk: sk {
     release-after-ms = <800>;
     quick-release;
 };
