@@ -1,0 +1,16 @@
+&corne_5col_left_transform {
+    compatible = "zmk,matrix-transform";
+    columns = <5>;
+    rows = <4>;
+    // This defines how logical positions map to your physical matrix
+    // 0–19 → left half positions (adjust to match your wiring)
+    col-offset = <0>;
+    row-offset = <0>;
+    map = <
+        0  1  2  3  4
+        5  6  7  8  9
+        10 11 12 13 14
+        15 16 17 18 19
+    >;
+};
+
