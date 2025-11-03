@@ -22,7 +22,7 @@
 
 
 / {
-    #include "transforms/init.dtsi";
+    #include "transforms/init.dtsi"
     chosen {
         zmk,matrix-transform = &five_column_transform;
     };
