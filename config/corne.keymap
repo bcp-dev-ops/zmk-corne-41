@@ -22,10 +22,6 @@
 
 
 / {
-    #include "transforms/init.dtsi"
-    chosen {
-        zmk,matrix-transform = &five_column_transform;
-    };
     combos {
         compatible = "zmk,combos";
         #include "combos/init.dtsi"
