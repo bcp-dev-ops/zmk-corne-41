@@ -20,7 +20,7 @@ alpha_strdy: alpha_strdy {
 
         /* Thumbs */
         /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-                                                                    &lt SYSTEM SPACE              &sticky_shift                 &lt SYMBOLS BACKSPACE         &sk_kp_tap LCTRL SPACE        &key_repeat                    &lt MACROPAD SPACE
+                                                                    &lt SYSTEM &bootloader    &sticky_shift                 &lt SYMBOLS BACKSPACE         &sk_kp_tap LCTRL SPACE        &key_repeat                    &lt MACROPAD &bootloader 
 
     >;
 };

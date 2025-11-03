@@ -22,14 +22,20 @@
 
 
 / {
+    #include "transforms/init.dtsi";
+    chosen {
+        zmk,matrix-transform = &five_column_transform;
+    };
     combos {
         compatible = "zmk,combos";
         #include "combos/init.dtsi"
     };
     macros {
+        compatible="zmk,macros";
         #include "macros/init.dtsi"
     };
     behaviors {
+        compatible = "zmk,behaviors";
         #include "behaviors/init.dtsi"
     };
     keymap {

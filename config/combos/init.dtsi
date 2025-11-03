@@ -1,4 +1,10 @@
 /* Left Hand Combos */
+combo_bootloader_left {
+    timeout-ms = <40>;
+    key-positions = <4 5 6>;
+    bindings = <&bootloader>;
+    layers = <0 1 2 3 4 5 6 7 8 9>;
+};
 combo_esc {
     timeout-ms = <40>;
     key-positions = <16 17>;
@@ -13,5 +19,12 @@ combo_save {
     layers = <0 1 2 3 4 5 6 7 8 9>;
 };
 /* Right Hand Combos */
+
+combo_bootloader_right {
+    timeout-ms = <40>;
+    key-positions = <22 23 24>;
+    bindings = <&bootloader>;
+    layers = <0 1 2 3 4 5 6 7 8 9>;
+};
 /* Two Hand Combos*/
 
