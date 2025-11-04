@@ -7,15 +7,15 @@ alpha_strdy: alpha_strdy {
 
         /* Top Row */
         /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-        &kp V                         &mo_kp_tap MACROPAD M                         &mo_kp_tap NAVIGATION_WINDOWS L                         &kp C                         &kp P                         &kp X                         &kp F                         &kp O                         &kp U                        &kp J
+        &none &kp V                         &mo_kp_tap MACROPAD M                         &mo_kp_tap NAVIGATION_WINDOWS L                         &kp C                         &kp P                         &kp X                         &kp F                         &kp O                         &kp U                        &kp J
 
         /* Home Row */
         /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-        &kp S                         &mo_kp_tap MOUSE T            &mo_kp_tap NAVIGATION_VIM R   &mo_kp_tap NUMBERS D          &mo_kp_tap NAVIGATION_KEYS Y  &kp PERIOD                   &kp N                         &kp A                         &kp E                         &kp I
+        &none &kp S                         &mo_kp_tap MOUSE T            &mo_kp_tap NAVIGATION_VIM R   &mo_kp_tap NUMBERS D          &mo_kp_tap NAVIGATION_KEYS Y  &kp PERIOD                   &kp N                         &kp A                         &kp E                         &kp I
 
         /* Bottom Row */
         /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-        &kp Z                         &mt LALT K                    &mt LCMD Q                    &mt LCMD G                    &kp W                         &kp B                         &mt RCMD H                    &mt RCMD APOSTROPHE           &mt RALT SEMICOLON            &kp COMMA
+        &none &kp Z                         &mt LALT K                    &mt LCMD Q                    &mt LCMD G                    &kp W                         &kp B                         &mt RCMD H                    &mt RCMD APOSTROPHE           &mt RALT SEMICOLON            &kp COMMA
 
 
         /* Thumbs */
