@@ -3,6 +3,6 @@ file_format: "1"
 id: corne_5col
 name: Corne 5-Column
 type: shield
-requires: [nice_nano_v1]
+requires: [nice_nano]
 description: |
   Custom Corne v4 shield with 5 columns per half.

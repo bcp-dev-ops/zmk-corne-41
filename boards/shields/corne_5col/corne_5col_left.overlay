@@ -2,8 +2,6 @@
     compatible = "zmk,matrix-transform";
     columns = <5>;
     rows = <4>;
-    // This defines how logical positions map to your physical matrix
-    // 0–19 → left half positions (adjust to match your wiring)
     col-offset = <0>;
     row-offset = <0>;
     map = <
