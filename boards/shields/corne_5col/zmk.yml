@@ -6,3 +6,6 @@ type: shield
 requires: [nice_nano]
 description: |
   Custom Corne v4 shield with 5 columns per half.
+variants:
+  - id: corne_5col_left
+  - id: corne_5col_right
