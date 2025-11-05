@@ -1,27 +1,45 @@
 /* Implements STRDY alpha layout */
 /* See: https://oxey.dev/sturdy/index.html */
+/* Corne Layout is based on 6 columns and 3 thumb keys */
+/* To keep this layout 5-column, we simply keep the 1st and 12th column empty */
+/* */
+/* Left Hand                             Right Hand */
+/* ┌────┬────┬────┬────┬────┬────┐       ┌────┬────┬────┬────┬────┬────┐ */
+/* │ (0)│  1 │  2 │  3 │  4 │  5 │       │  6 │  7 │  8 │  9 │ 10 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │ 13 │ 14 │ 15 │ 16 │ 17 │       │ 18 │ 19 │ 20 │ 21 │ 22 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │ 25 │ 26 │ 27 │ 28 │ 29 │       │ 30 │ 31 │ 32 │ 33 │ 34 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │ 36 │ 37 │ 38 │       │ 39 │ 40 │ 41 │    │    │    │ */
+/* └────┴────┴────┴────┴────┴────┘       └────┴────┴────┴────┴────┴────┘ */
+/* */
+/* Corne Layout is based on 6 columns and 3 thumb keys */
+/* To keep this layout 5-column, we simply keep the 1st and 12th column empty */
+/* 
+/* Left Hand                             Right Hand */
+/* ┌────┬────┬────┬────┬────┬────┐       ┌────┬────┬────┬────┬────┬────┐ */
+/* │    │  v │  m │  l │  c │  p │       │  x │  f │  o │  u │  j │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │  s │  t │  r │  d │  y │       │  . │  n │  a │  e │  i │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │  z │  k │  q │  g │  w │       │  b │  h │  ' │  ; │  , │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │(T1)│(T2)│(T3)│       │(T4)│(T5)│(T6)│    │    │    │ */
+/* └────┴────┴────┴────┴────┴────┘       └────┴────┴────┴────┴────┴────┘ */
+/* T1 - Space / Mouse Clicks Layer       T4 - Left Control / Space       */
+/* T2 - Left Shift (Sticky)              T5 - Key Repeat                 */
+/* T3 - Backspace / Symbols Layer        T6 - Macropad Layer / Space     */
+
 
 alpha_strdy: alpha_strdy {
     display-name = "Alpha STRDY";
     bindings = <
-
-        /* Top Row */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-        &none &kp V                         &mo_kp_tap MACROPAD M                         &mo_kp_tap NAVIGATION_WINDOWS L                         &kp C                         &kp P                         &kp X                         &kp F                         &kp O                         &kp U                        &kp J &none
-
-        /* Home Row */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-        &none &kp S                         &mo_kp_tap MOUSE T            &mo_kp_tap NAVIGATION_VIM R   &mo_kp_tap NUMBERS D          &mo_kp_tap NAVIGATION_KEYS Y  &kp PERIOD                   &kp N                         &kp A                         &kp E                         &kp I &none
-
-        /* Bottom Row */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-        &none &kp Z                         &mt LALT K                    &mt LCMD Q                    &mt LCMD G                    &kp W                         &kp B                         &mt RCMD H                    &mt RCMD APOSTROPHE           &mt RALT SEMICOLON            &kp COMMA &none
-
-
-        /* Thumbs */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-                                                                    &lt SYSTEM &bootloader    &sticky_shift                 &lt SYMBOLS BACKSPACE         &sk_kp_tap LCTRL SPACE        &key_repeat                    &lt MACROPAD &bootloader 
-
+    /*  [SKIP-] [LEFT----------------------------------------------------------------------------------------------------------------------] [RIGHT HAND -------------------------------------------------------------------------------------------] [SKIP-]*/
+        &none   &kp V   &mo_kp_tap MACROPAD M   &mo_kp_tap NAVIGATION_WINDOWS L      &kp C                  &kp P                             &kp X                    &kp F         &kp O                 &kp U                &kp J                 &none
+        &none   &kp S   &mo_kp_tap MOUSE T      &mo_kp_tap NAVIGATION_VIM R          &mo_kp_tap NUMBERS D   &mo_kp_tap NAVIGATION_KEYS Y      &kp PERIOD               &kp N         &kp A                 &kp E                &mo_kp_tap SYSTEM I   &none
+        &none   &kp Z   &mt LALT K              &mt LCMD Q                           &mt LCMD G             &kp W                             &kp B                    &mt RCMD H    &mt RCMD APOSTROPHE   &mt RALT SEMICOLON   &kp COMMA             &none
+                                                &lt MOUSE_CLICKS SPACE               &sticky_shift          &lt SYMBOLS BACKSPACE             &sk_kp_tap LCTRL SPACE   &key_repeat   &lt MACROPAD SPACE 
     >;
 };
 

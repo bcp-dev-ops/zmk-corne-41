@@ -18,7 +18,8 @@
 #define SYSTEM              6
 #define MOUSE               7
 #define MOUSE_SLOW          8
-#define MACROPAD            9
+#define MOUSE_CLICKS        9
+#define MACROPAD            10 
 
 
 / {
@@ -45,6 +46,7 @@
         #include "layers/system.dtsi"
         #include "layers/mouse.dtsi"
         #include "layers/mouse_slow.dtsi"
+        #include "layers/mouse_clicks.dtsi"
         #include "layers/macropad.dtsi"
     };
 };
