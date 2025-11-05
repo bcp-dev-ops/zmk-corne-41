@@ -1,0 +1,15 @@
+&i2c1 {
+    status = "okay";
+    sda-pin = <27>;
+    scl-pin = <26>;
+    clock-frequency = <I2C_BITRATE_STANDARD>;
+
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        rotation = <180>;
+    };
+};
+

@@ -1,0 +1,17 @@
+status_screen {
+    wpm {
+        compatible = "zmk,widget-wpm-status";
+        x = <0>;
+        y = <0>;
+    };
+    layer {
+        compatible = "zmk,widget-layer-status";
+        x = <0>;
+        y = <16>;
+    };
+    battery {
+        compatible = "zmk,widget-battery-status";
+        x = <90>;
+        y = <0>;
+    };
+};

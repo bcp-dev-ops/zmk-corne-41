@@ -6,27 +6,32 @@
 #include "behaviors/_mt.dtsi"
 #include "behaviors/_sk.dtsi"
 #include "behaviors/_caps_word.dtsi"
+#include "displays/_i2c1.dtsi"
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1800
 #include <dt-bindings/zmk/pointing.h>
 
-#define ALPHA_STRDY         0
-#define NUMBERS             1
-#define SYMBOLS             2
-#define NAVIGATION_KEYS     3
-#define NAVIGATION_VIM      4
-#define NAVIGATION_WINDOWS  5
-#define SYSTEM              6
-#define MOUSE               7
-#define MOUSE_SLOW          8
-#define MOUSE_CLICKS        9
+#define ALPHA_STRDY          0
+#define NUMBERS              1
+#define SYMBOLS              2
+#define NAVIGATION_KEYS      3
+#define NAVIGATION_VIM       4
+#define NAVIGATION_WINDOWS   5
+#define SYSTEM               6
+#define MOUSE                7
+#define MOUSE_SLOW           8
+#define MOUSE_CLICKS         9
 #define MACROPAD            10 
 
 
 / {
     combos {
         compatible = "zmk,combos";
-        #include "combos/init.dtsi"
+        #include "combos/combos.dtsi"
+    };
+    zmk,display {
+        compatible = "zmk,display-status-screen";
+        #include "displays/layout.dtsi";
     };
     macros {
         compatible="zmk,macros";
