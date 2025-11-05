@@ -5,6 +5,7 @@
 #include <behaviors.dtsi>
 #include "behaviors/_mt.dtsi"
 #include "behaviors/_sk.dtsi"
+#include "behaviors/_caps_word.dtsi"
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1800
 #include <dt-bindings/zmk/pointing.h>
