@@ -1,25 +1,38 @@
 /* Implements custom navigation layer for common os interactions */
 /* */
+/* Corne Layout is based on 6 columns and 3 thumb keys */
+/* To keep this layout 5-column, we simply keep the 1st and 12th column empty */
+/* */
+/* Left Hand                             Right Hand */
+/* ┌────┬────┬────┬────┬────┬────┐       ┌────┬────┬────┬────┬────┬────┐ */
+/* │ (0)│  1 │  2 │  3 │  4 │  5 │       │  6 │  7 │  8 │  9 │ 10 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │ 13 │ 14 │ 15 │ 16 │ 17 │       │ 18 │ 19 │ 20 │ 21 │ 22 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │ 25 │ 26 │ 27 │ 28 │ 29 │       │ 30 │ 31 │ 32 │ 33 │ 34 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │ 36 │ 37 │ 38 │       │ 39 │ 40 │ 41 │    │    │    │ */
+/* └────┴────┴────┴────┴────┴────┘       └────┴────┴────┴────┴────┴────┘ */
+/* */
+/* Navigation Keys Layer (Corne 5-column layout) */
+/* Left Hand                             Right Hand */
+/* ┌────┬────┬────┬────┬────┬────┐       ┌────┬────┬────┬────┬────┬────┐ */
+/* │    │    │INS │    │    │    │       │    │END │HOME│    │    │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │ ⌥↵ │    │ ⌘↹ │    │       │ ←  │ ↓  │ ↑  │ →  │    │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │ESC │    │DEL │    │       │    │Pg↓ │Pg↑ │    │    │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │    │    │    │       │    │    │    │    │    │    │ */
+/* └────┴────┴────┴────┴────┴────┘       └────┴────┴────┴────┴────┴────┘ */
 
 navigation_keys: navigation_keys {
     display-name = "Navigation Keys";
     bindings = <
-
-        /* Top Row */
-        /* ------------------------LEFT HAND --------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-           &none    &kp INSERT        &none    &none         &none       &none             &kp END         &kp HOME      &none       &none
-
-        /* Home Row */
-        /* ------------------------LEFT HAND --------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-           &none    &mt LALT RETURN   &trans   &mt LCMD TAB  &none       &kp LEFT          &kp DOWN        &kp UP        &kp RIGHT   &none
-
-        /* Bottom Row */
-        /* ------------------------LEFT HAND ---------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-           &none    &kp ESC           &none    &kp DEL       &none       &none             &kp PAGE_DOWN   &kp PAGE_UP   &none       &none
-
-        /* Thumbs */
-        /* ------------------------LEFT HAND ---------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-                                      &trans   &trans        &trans      &trans            &trans          &trans
-
+    /*  [SKIP-] [LEFT-------------------------------------------------------] [RIGHT HAND -----------------------------------------------] [SKIP-]*/
+        &none   &none   &kp INSERT         &none    &none          &none      &none      &kp END         &kp HOME      &none       &none   &none
+        &none   &none   &mt LALT RETURN    &trans   &mt LCMD TAB   &none      &kp LEFT   &kp DOWN        &kp UP        &kp RIGHT   &none   &none
+        &none   &none   &kp ESC            &none    &kp DEL        &none      &none      &kp PAGE_DOWN   &kp PAGE_UP   &none       &none   &none
+                                           &trans   &trans         &trans     &trans     &trans          &trans
     >;
 };

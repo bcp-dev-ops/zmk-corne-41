@@ -1,25 +1,39 @@
 /* Implements Solid mouse (slow) layout */
 /* See: https://github.com/vladsolokha/zmk-config/tree/main */
+/* Corne Layout is based on 6 columns and 3 thumb keys */
+/* To keep this layout 5-column, we simply keep the 1st and 12th column empty */
+/* */
+/* Left Hand                             Right Hand */
+/* ┌────┬────┬────┬────┬────┬────┐       ┌────┬────┬────┬────┬────┬────┐ */
+/* │ (0)│  1 │  2 │  3 │  4 │  5 │       │  6 │  7 │  8 │  9 │ 10 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │ 13 │ 14 │ 15 │ 16 │ 17 │       │ 18 │ 19 │ 20 │ 21 │ 22 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │ 25 │ 26 │ 27 │ 28 │ 29 │       │ 30 │ 31 │ 32 │ 33 │ 34 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │ 36 │ 37 │ 38 │       │ 39 │ 40 │ 41 │    │    │    │ */
+/* └────┴────┴────┴────┴────┴────┘       └────┴────┴────┴────┴────┴────┘ */
+/* */
+/* Mouse Slow Layer (Corne 5-column layout) */
+/* Left Hand                             Right Hand */
+/* ┌────┬────┬────┬────┬────┬────┐       ┌────┬────┬────┬────┬────┬────┐ */
+/* │    │    │    │    │    │    │       │    │    │    │    │    │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │    │    │    │       │ ←  │ ↓  │ ↑  │ →  │    │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │    │    │    │       │    │    │    │    │    │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │    │    │    │       │    │    │    │    │    │    │ */
+/* └────┴────┴────┴────┴────┴────┘       └────┴────┴────┴────┴────┴────┘ */
+
 
 mouse_slow: mouse_slow {
     display-name = "Mouse Slow";
     bindings = <
-        /* Top Row */
-        /* ------------------------LEFT HAND -------*/    /* ------------------------RIGHT HAND -------------------------------------------------*/
-        &trans   &trans   &trans   &trans   &trans           &trans   &trans              &mmv MOVE_Y(-900)  &trans             &trans
-
-        /* Home Row */
-        /* ------------------------LEFT HAND -------*/    /* ------------------------RIGHT HAND -------------------------------------------------*/
-        &trans   &trans   &trans   &trans   &trans           &trans   &mmv MOVE_X(-900)   &mmv MOVE_Y(900)   &mmv MOVE_X(900)   &trans
-
-        /* Bottom Row */
-        /* ------------------------LEFT HAND -------*/    /* ------------------------RIGHT HAND -------------------------------------------------*/
-        &trans   &trans   &trans   &trans   &trans           &trans   &trans              &trans             &trans             &trans
-
-
-        /* Thumbs */
-        /* ------------------------LEFT HAND -------*/    /* ------------------------RIGHT HAND -------------------------------------------------*/
-                          &trans   &trans   &trans           &trans   &trans              &trans
+    /*  [SKIP-] [LEFT-------------------------------------------] [RIGHT HAND ---0000000000------------------------------------------------------------------] [SKIP-]*/
+        &none   &trans   &trans   &trans    &trans   &trans       &trans              &trans               &trans               &trans               &trans    &none
+        &none   &trans   &trans   &trans    &trans   &trans       &mmv MOVE_X(-900)   &mmv MOVE_Y(0900)    &mmv MOVE_Y(-900)    &mmv MOVE_X(900)     &trans    &none
+        &none   &trans   &trans   &trans    &trans   &trans       &trans              &trans               &trans               &trans               &trans    &none
+                                  &trans    &trans   &trans       &trans              &trans               &trans
     >;
-
 };

@@ -1,26 +1,41 @@
 /* Implements Solid symbols layout */
 /* See: https://github.com/vladsolokha/zmk-config/tree/main */
+/* Corne Layout is based on 6 columns and 3 thumb keys */
+/* To keep this layout 5-column, we simply keep the 1st and 12th column empty */
+/* */
+/* Left Hand                             Right Hand */
+/* ┌────┬────┬────┬────┬────┬────┐       ┌────┬────┬────┬────┬────┬────┐ */
+/* │ (0)│  1 │  2 │  3 │  4 │  5 │       │  6 │  7 │  8 │  9 │ 10 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │ 13 │ 14 │ 15 │ 16 │ 17 │       │ 18 │ 19 │ 20 │ 21 │ 22 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │ 25 │ 26 │ 27 │ 28 │ 29 │       │ 30 │ 31 │ 32 │ 33 │ 34 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │ 36 │ 37 │ 38 │       │ 39 │ 40 │ 41 │    │    │    │ */
+/* └────┴────┴────┴────┴────┴────┘       └────┴────┴────┴────┴────┴────┘ */
+/* */
+/* Symbols Layer (Corne 5-column layout) */
+/* Left Hand                             Right Hand */
+/* ┌────┬────┬────┬────┬────┬────┐       ┌────┬────┬────┬────┬────┬────┐ */
+/* │    │    │  ! │  [ │  ] │    │       │    │  % │  + │  = │    │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │  _ │  & │  ( │  ) │  ~ │       │  ^ │  * │  # │  $ │  - │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │  ; │ ⌥@ │ ⌘[ │ ⌘] │  | │       │  \ │ ⌘< │ ⌘> │ ⌥" │  : │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │ T1 │ T2 │ T3 │       │ T4 │ T5 │ T6 │    │    │    │ */
+/* └────┴────┴────┴────┴────┴────┘       └────┴────┴────┴────┴────┴────┘ */
+/* T1 - Passthrough                             T4 - Passthrough         */
+/* T2 - Passthrough                             T5 - Passthrough         */
+/* T3 - Passthrough                             T6 - Passthrough         */
 
 symbols: symbols {
     display-name = "Symbols";
     bindings = <
-
-        /* Top Row */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-        &none             &kp EXCL        &kp LBRC       &kp RBRC         &none                   &none            &kp PERCENT       &kp PLUS        &kp EQUAL       &none
-
-        /* Home Row */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-        &kp UNDER         &kp AMPS        &kp LPAR       &kp RPAR         &kp TILDE               &kp CARET        &kp STAR          &kp HASH        &kp DOLLAR      &kp MINUS
-
-        /* Bottom Row */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-        &kp SEMICOLON     &mt LALT AT     &mt LCMD LBKT  &mt LCMD RBKT    &kp PIPE                &kp BACKSLASH    &mt LCMD LT       &mt LCMD GT     &mt LALT DQT    &kp COLON
-
-
-        /* Thumbs */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND --------------------------------------------*/
-                                          &trans         &trans           &trans                  &trans           &trans            &trans
-
+    /*  [SKIP-] [LEFT---------------------------------------------------------------------------] [RIGHT HAND -------------------------------------------------------------------] [SKIP-]*/
+        &none   &none            &kp EXCL         &kp LBRC         &kp RBRC         &none          &none            &kp PERCENT    &kp PLUS        &kp EQUAL        &none          &none
+        &none   &kp UNDER        &kp AMPS         &kp LPAR         &kp RPAR         &kp TILDE      &kp CARET        &kp STAR       &kp HASH        &kp DOLLAR       &kp MINUS      &none
+        &none   &kp SEMICOLON    &mt LALT AT      &mt LCMD LBKT    &mt LCMD RBKT    &kp PIPE       &kp BACKSLASH    &mt LCMD LT    &mt LCMD GT     &mt LALT DQT     &kp COLON      &none
+                                                  &trans           &trans           &trans         &trans           &trans         &trans
     >;
 };

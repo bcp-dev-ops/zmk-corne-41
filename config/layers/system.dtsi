@@ -1,27 +1,41 @@
 /* Implements custom system layer for common hardware interactions */
 /* */
+/* Corne Layout is based on 6 columns and 3 thumb keys */
+/* To keep this layout 5-column, we simply keep the 1st and 12th column empty */
+/* */
+/* Left Hand                             Right Hand */
+/* ┌────┬────┬────┬────┬────┬────┐       ┌────┬────┬────┬────┬────┬────┐ */
+/* │ (0)│  1 │  2 │  3 │  4 │  5 │       │  6 │  7 │  8 │  9 │ 10 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │ 13 │ 14 │ 15 │ 16 │ 17 │       │ 18 │ 19 │ 20 │ 21 │ 22 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │ 25 │ 26 │ 27 │ 28 │ 29 │       │ 30 │ 31 │ 32 │ 33 │ 34 │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │ 36 │ 37 │ 38 │       │ 39 │ 40 │ 41 │    │    │    │ */
+/* └────┴────┴────┴────┴────┴────┘       └────┴────┴────┴────┴────┴────┘ */
+/* */
+/* System Layer (Corne 5-column layout) */
+/* Left Hand                             Right Hand */
+/* ┌────┬────┬────┬────┬────┬────┐       ┌────┬────┬────┬────┬────┬────┐ */
+/* │    │    │    │    │    │    │       │MUTE│V_DN│V_UP│B_DN│B_UP│    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │    │    │    │       │    │    │    │    │    │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │BT3 │BT2 │BT1 │BT0 │BT4 │       │    │    │    │    │    │    │ */
+/* ├────┼────┼────┼────┼────┼────┤       ├────┼────┼────┼────┼────┼────┤ */
+/* │    │    │    │    │    │    │       │ PP │NEXT│    │    │    │    │ */
+/* └────┴────┴────┴────┴────┴────┘       └────┴────┴────┴────┴────┴────┘ */
+/* T1 - None                             T4 - Play and Pause Media       */
+/* T2 - None                             T5 - Skip Next Media            */
+/* T3 - None                             T6 - None                       */
 
 system: system {
     display-name = "System";
     bindings = <
-
-        /* Top Row */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND ------------------------------------------------------*/
-           &none              &none            &none           &none          &none               &kp C_MUTE &kp C_VOL_DN   &kp C_VOL_UP  &kp C_BRI_DN  &kp C_BRI_UP
-
-
-        /* Home Row */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND ------------------------------------------------------*/
-           &none              &none            &none           &none          &none               &none          &none            &none         &none                 &none
-
-        /* Bottom Row */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND ------------------------------------------------------*/
-        &bt BT_SEL 3       &bt BT_SEL 2     &bt BT_SEL 1    &bt BT_SEL 0      &bt BT_SEL 4        &none          &none            &none         &none                 &none 
-
-
-        /* Thumbs */
-        /* ------------------------LEFT HAND --------------------------------------------*/   /* ------------------------RIGHT HAND ------------------------------------------------------*/
-                                            &none           &none             &none               &kp C_PP       &kp C_NEXT       &none
-
+    /*  [SKIP-] [LEFT-----------------------------------------------------------------------------] [RIGHT HAND ----------------------------------------------------------] [SKIP-]*/
+        &none   &none          &none            &none            &none            &none             &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP   &kp C_BRI_DN   &kp C_BRI_UP   &none
+        &none   &none          &none            &none            &none            &none             &none        &none          &none          &none          &none          &none
+        &none   &bt BT_SEL 3   &bt BT_SEL 2     &bt BT_SEL 1     &bt BT_SEL 0     &bt BT_SEL 4      &none        &none          &none          &none          &none          &none
+                                                &none            &none            &none             &kp C_PP     &kp C_NEXT     &none
     >;
 };
