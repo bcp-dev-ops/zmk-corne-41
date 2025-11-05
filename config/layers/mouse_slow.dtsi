@@ -32,7 +32,7 @@ mouse_slow: mouse_slow {
     bindings = <
     /*  [SKIP-] [LEFT-------------------------------------------] [RIGHT HAND ---0000000000------------------------------------------------------------------] [SKIP-]*/
         &none   &trans   &trans   &trans    &trans   &trans       &trans              &trans               &trans               &trans               &trans    &none
-        &none   &trans   &trans   &trans    &trans   &trans       &mmv MOVE_X(-900)   &mmv MOVE_Y(0900)    &mmv MOVE_Y(-900)    &mmv MOVE_X(900)     &trans    &none
+        &none   &trans   &trans   &trans    &trans   &trans       &mmv MOVE_X(-900)   &mmv MOVE_Y(900)     &mmv MOVE_Y(-900)    &mmv MOVE_X(900)     &trans    &none
         &none   &trans   &trans   &trans    &trans   &trans       &trans              &trans               &trans               &trans               &trans    &none
                                   &trans    &trans   &trans       &trans              &trans               &trans
     >;
