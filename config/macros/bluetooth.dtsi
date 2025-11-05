@@ -1,0 +1,6 @@
+bt_clcla: tap_dance_bt_control {
+    #binding-cells = <0>;
+    compatible = "zmk,behavior-tap-dance";
+    tapping-term-ms = <300>;
+    bindings = <&none>, <&bt BT_CLR>, <&bt BT_CLR_ALL>;
+};
