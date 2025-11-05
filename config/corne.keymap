@@ -6,7 +6,7 @@
 #include "behaviors/_mt.dtsi"
 #include "behaviors/_sk.dtsi"
 #include "behaviors/_caps_word.dtsi"
-#include "displays/_i2c1.dtsi"
+/* #include "displays/_i2c1.dtsi" */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1800
 #include <dt-bindings/zmk/pointing.h>
@@ -29,10 +29,10 @@
         compatible = "zmk,combos";
         #include "combos/combos.dtsi"
     };
-    zmk,display {
-        compatible = "zmk,display-status-screen";
-        #include "displays/layout.dtsi";
-    };
+    /* zmk,display { */
+    /*     compatible = "zmk,display-status-screen"; */
+    /*     #include "displays/layout.dtsi"; */
+    /* }; */
     macros {
         compatible="zmk,macros";
         #include "macros/init.dtsi"
